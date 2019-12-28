@@ -3,11 +3,15 @@
 ## basic idea
 - register, log on, find cycling route per province and rate them.
 - Het Perspectief final "PHP basis" exercise
+- inspired by https://fietsroute.org/
 
 ## implementation
-- orignally developed in 
-- password encryption
-- mysql database not included
+- remembers language across sessions
+- header location routing
+- orignally developed with PHP 5
+- password encryption 
+- mysql database not included in these files
 
 ## to do's
-- 
+- missing actual practical info on how to cycle
+
