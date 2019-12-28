@@ -8,8 +8,7 @@
 ## implementation
 - remembers language across sessions
 - header location routing
-- orignally developed with PHP 5
-- password encryption 
+- password encryption
 - mysql database not included in these files
 
 ## to do's
