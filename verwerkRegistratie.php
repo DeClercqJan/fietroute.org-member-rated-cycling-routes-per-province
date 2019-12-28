@@ -45,7 +45,7 @@
 					$stmt = $db -> prepare($sql);
 					$stmt -> bindParam(':gebruikersnaam', $gebruikersnaam, PDO::PARAM_STR);
 					$stmt -> bindParam(':emailadres', $emailadres, PDO::PARAM_STR);
-					$stmt -> bindParam(':wachtwoord', $wachtwoord, PDO::PARAM_STR);
+					$stmt -> bindParam(':wachtwoord', $wachtwoord_hashed, PDO::PARAM_STR);
 					$stmt -> bindParam(':voornaam', $voornaam, PDO::PARAM_STR);
 					$stmt -> bindParam(':familienaam', $familienaam, PDO::PARAM_STR);
 					
@@ -53,6 +53,7 @@
 					$emailadres = $_POST["emailadres"];
 					// opgelet wachtwoord mag je niet zomaar opslaan (in geval je gehackt wordt), maar moet gebruik maken van een hashing functie (zullen we later zien)
 					$wachtwoord = $_POST["wachtwoord"];
+					$wachtwoord_hashed = password_hash($wachtwoord, PASSWORD_DEFAULT);
 					$voornaam = $_POST["voornaam"];
 					$familienaam = $_POST["familienaam"];
 					$stmt -> execute();
